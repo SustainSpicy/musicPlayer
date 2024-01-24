@@ -1,0 +1,46 @@
+import React from "react";
+import SongItem from "./SongItem";
+import { useDispatch, useSelector } from "react-redux";
+
+const SongList = ({ songData }) => {
+  const { isPlaying, currentSong } = useSelector((state) => state.player);
+
+  return (
+    <section className="container relative mx-auto shadow-lg mt-2 overflow-x-auto">
+      <table className="w-full text-sm text-left  text-gray-500  min-w-[550px]">
+        <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">
+          <tr>
+            <th scope="col" className="px-6 py-3"></th>
+
+            <th scope="col" className="px-6 py-3">
+              Song Title
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Artist Name
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Track number
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Action button
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {songData.map((song) => {
+            return (
+              <SongItem
+                key={song.id}
+                {...song}
+                currentSong={currentSong}
+                isPlaying={isPlaying}
+              />
+            );
+          })}
+        </tbody>
+      </table>
+    </section>
+  );
+};
+
+export default SongList;
