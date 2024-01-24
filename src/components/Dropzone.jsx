@@ -13,6 +13,7 @@ const Dropzone = ({ selectedFile, setSelectedFile, maxSizeInBytes }) => {
         setSelectedFile(file);
       } else {
         // File size exceeds the allowed limit
+        console.log("Error file selected");
         setMsg("File size exceeds the allowed limit.");
       }
     }

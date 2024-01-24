@@ -4,6 +4,7 @@ import SongList from "./components/SongList";
 import { loadList } from "./redux/slice/playerSlice";
 import { useEffect } from "react";
 import { Dropdown } from "flowbite-react";
+import AlertProvider from "./providers/AlertProvider";
 
 function App() {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Navbar />
+
       <SongList songData={searchList.length > 0 ? searchList : songs} />
     </>
   );
