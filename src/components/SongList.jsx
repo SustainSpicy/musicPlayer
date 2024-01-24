@@ -23,9 +23,7 @@ const SongList = ({ songData }) => {
             <th scope="col" className="px-6 py-3">
               Track number
             </th>
-            <th scope="col" className="px-6 py-3">
-              Action button
-            </th>
+            <th scope="col" className="px-6 py-3"></th>
           </tr>
         </thead>
         <tbody>
