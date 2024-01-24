@@ -22,6 +22,8 @@ This React application is a simple music player that allows users to view a list
 
 The application uses Redux for state management. The main state is handled by the `playerSlice`, which includes information about the list of songs, current playing status, and the current song being played.
 
+The popup alerts are managed by React context, a powerful state management feature that allows data to be shared and accessed across components in a React application.
+
 ## Local Development
 
 To run the application locally, follow these steps:
